@@ -1,6 +1,9 @@
 {
 	"name": "CreatenewExternalFileFormatDedicated",
 	"properties": {
+		"folder": {
+			"name": "PracticeSynapse"
+		},
 		"content": {
 			"query": "\nCREATE EXTERNAL FILE FORMAT ParquetExternalFileFormat\nWITH\n(\n    FORMAT_TYPE = PARQUET,\n    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'\n)",
 			"metadata": {

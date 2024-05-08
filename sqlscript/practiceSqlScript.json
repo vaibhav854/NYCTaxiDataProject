@@ -1,6 +1,9 @@
 {
 	"name": "practiceSqlScript",
 	"properties": {
+		"folder": {
+			"name": "PracticeSynapse"
+		},
 		"content": {
 			"query": "SELECT department_id,MAX(salary) AS[salary]\n FROM \n    OPENROWSET (\n        BULK 'https://synapsestoragee.blob.core.windows.net/demo/employees.csv',\n        FORMAT ='CSV',\n        HEADER_ROW = TRUE,\n        PARSER_VERSION = '2.0'\n    \n) AS [result]\nGROUP BY department_id\n\n\n-- SELECT * FROM OPENROWSET(\n--     BULK 'https://synapsestoragee.blob.core.windows.net/demo/departments.csv',\n--     FORMAT = 'CSV',\n--     HEADER_ROW = TRUE,\n--     PARSER_VERSION = '2.0'\n-- ) AS [dept]\n\n\n\n\n    \n-- how to see SQL logins\nSELECT * FROM sys.sql_logins\n\n-- how to create login\nCREATE LOGIN vaibhav WITH PASSWORD = 'kadam@9044'\n\n--how to create user from login\nCREATE USER ab FROM LOGIN vaibhav;\n\n\n--  how create temporary table\n CREATE TABLE #employeesTemp\n(\n   empId INT NOT NULL ,\n   empName NVARCHAR(20),\n   gender  NVARCHAR(20)\n)\n\nINSERT INTO #employeesTemp VALUES (1,'Vaibhav','Male');\nINSERT INTO #employeesTemp VALUES (2,'Shreyas','Male');\nINSERT INTO #employeesTemp VALUES (3,'Shambhuraje','Male');\n\n-- how to create temporary teble using select\nCREATE TABLE ##employeesTemp2\nWITH \n(\n    DISTRIBUTION = HASH(empId)\n)\nAS\n(\n    SELECT  * FROM dbo.employeesTemp\n)\n\n\n\n\n\n\n\n",
 			"metadata": {

@@ -1,6 +1,9 @@
 {
 	"name": "CreatePhysicalTable",
 	"properties": {
+		"folder": {
+			"name": "PracticeSynapse"
+		},
 		"content": {
 			"query": " CREATE TABLE [dbo].[employees]\n(\n   empId INT NOT NULL ,\n   empName NVARCHAR(20),\n   gender  NVARCHAR(20)\n)\nWITH\n(\n    DISTRIBUTION = HASH (empId),\n    CLUSTERED COLUMNSTORE INDEX\n)\nGO\n\nINSERT INTO dbo.employees VALUES (1,'Vaibhav','Male');\nINSERT INTO dbo.employees VALUES (2,'Shreyas','Male');\nINSERT INTO dbo.employees VALUES (3,'Shambhuraje','Male');\nINSERT\n\n\n--------------------------------------------------------------------------------------------------------------------------\n\n--Create table using select statement\nCREATE TABLE dbo.femaleEmp\nWITH\n(\nDISTRIBUTION = HASH(empId),\nCLUSTERED COLUMNSTORE INDEX\n)\nAS\n    SELECT * FROM dbo.employees\n    WHERE gender = 'Female'\n\nSELECT * FROM dbo.femaleEmp;\n\n------------------------------------------------------------------------------------------------------------------------\n--Using INTO\n\nSELECT *\nINTO dbo.employeesNew\nFROM dbo.employees;\n\nSELECT * FROM dbo.employeesNew\n----------------------------------------------------------------------------------------------------------------------------\n",
 			"metadata": {

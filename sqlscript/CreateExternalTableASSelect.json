@@ -1,6 +1,9 @@
 {
 	"name": "CreateExternalTableASSelect",
 	"properties": {
+		"folder": {
+			"name": "PracticeSynapse"
+		},
 		"content": {
 			"query": "-- First we have to create a schema\n-- CREATE SCHEMA NYCTaxi;\n\n--After we have to create external table\nCREATE EXTERNAL TABLE NYCTaxi.PassengersCountStats\nWITH\n(\n    LOCATION = 'demo/NYCTaxi/Aggdata',\n    DATA_SOURCE = demoExternalDataSOurce2,\n    FILE_FORMAT = parquetExternalFileFormat\n)\nAS\n    SELECT PassengerCount,\n        SUM(TripDistanceMiles) AS SumTripDistance,\n        AVG(TripDistanceMiles) AS AvgTripDistance\n    FROM\n        OPENROWSET\n        (\n            BULK 'https://synapsestoragee.blob.core.windows.net/demo/NYCTripSmall.parquet',\n            FORMAT = 'PARQUET'\n            \n        )\n    AS [rows]\n        WHERE TripDistanceMiles > 0  AND PassengerCount > 0\n        GROUP BY PassengerCount\nGO\n\n\n-- SELECT * FROM NYCTaxi.PassengersCountStats;\n\n-- DROP EXTERNAL TABLE NYCTaxi.PassengersCountStats;\n\n\n-- This is auto-generated code Show first 100 rows \nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://synapsestoragee.dfs.core.windows.net/demo/NYCTaxi/Aggdata/5AB2C5DF-20E2-4E8D-885B-1DB01A68C7BE_4_0-1.parquet',\n        FORMAT = 'PARQUET'\n    ) AS [result]\n\n\n\n",
 			"metadata": {

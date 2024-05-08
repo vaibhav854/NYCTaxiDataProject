@@ -1,6 +1,9 @@
 {
 	"name": "createExternalTableUsingDdicated",
 	"properties": {
+		"folder": {
+			"name": "PracticeSynapse"
+		},
 		"content": {
 			"query": " CREATE TABLE [dbo].[employees2]\n(\n   empId INT NOT NULL ,\n   empName NVARCHAR(20),\n   gender  NVARCHAR(20)\n)\nWITH\n(\n    DISTRIBUTION = HASH (empId),\n    CLUSTERED COLUMNSTORE INDEX\n)\nGO\n\nINSERT INTO dbo.employees2 VALUES (1,'Vaibhav','Male');\nINSERT INTO dbo.employees2 VALUES (2,'Shreyas','Male');\nINSERT INTO dbo.employees2 VALUES (3,'Shambhuraje','Male');\n\n\n",
 			"metadata": {

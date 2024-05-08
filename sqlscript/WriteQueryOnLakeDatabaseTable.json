@@ -1,6 +1,9 @@
 {
 	"name": "WriteQueryOnLakeDatabaseTable",
 	"properties": {
+		"folder": {
+			"name": "PracticeSynapse"
+		},
 		"content": {
 			"query": "SELECT * FROM emp2",
 			"metadata": {
