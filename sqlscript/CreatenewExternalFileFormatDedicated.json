@@ -1,0 +1,17 @@
+{
+	"name": "CreatenewExternalFileFormatDedicated",
+	"properties": {
+		"content": {
+			"query": "\nCREATE EXTERNAL FILE FORMAT ParquetExternalFileFormat\nWITH\n(\n    FORMAT_TYPE = PARQUET,\n    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'\n)",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "DedicatedsqlPool",
+				"poolName": "DedicatedsqlPool"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

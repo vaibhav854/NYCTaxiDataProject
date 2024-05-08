@@ -1,0 +1,1953 @@
+{
+	"name": "practiceSparkPool",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "SparkPool",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "0584c33b-4ec2-482c-af03-ac298b525738"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"e6320e9b-1e4c-4f33-8b8b-bfa6a6f200b3": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "1",
+										"1": "albert_park",
+										"2": "Albert Park Grand Prix Circuit",
+										"3": "Melbourne",
+										"4": "Australia",
+										"5": "-37.8497",
+										"6": "144.968",
+										"7": "10",
+										"8": "http://en.wikipedia.org/wiki/Melbourne_Grand_Prix_Circuit"
+									},
+									{
+										"0": "2",
+										"1": "sepang",
+										"2": "Sepang International Circuit",
+										"3": "Kuala Lumpur",
+										"4": "Malaysia",
+										"5": "2.76083",
+										"6": "101.738",
+										"7": "18",
+										"8": "http://en.wikipedia.org/wiki/Sepang_International_Circuit"
+									},
+									{
+										"0": "3",
+										"1": "bahrain",
+										"2": "Bahrain International Circuit",
+										"3": "Sakhir",
+										"4": "Bahrain",
+										"5": "26.0325",
+										"6": "50.5106",
+										"7": "7",
+										"8": "http://en.wikipedia.org/wiki/Bahrain_International_Circuit"
+									},
+									{
+										"0": "4",
+										"1": "catalunya",
+										"2": "Circuit de Barcelona-Catalunya",
+										"3": "Montmeló",
+										"4": "Spain",
+										"5": "41.57",
+										"6": "2.26111",
+										"7": "109",
+										"8": "http://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya"
+									},
+									{
+										"0": "5",
+										"1": "istanbul",
+										"2": "Istanbul Park",
+										"3": "Istanbul",
+										"4": "Turkey",
+										"5": "40.9517",
+										"6": "29.405",
+										"7": "130",
+										"8": "http://en.wikipedia.org/wiki/Istanbul_Park"
+									},
+									{
+										"0": "6",
+										"1": "monaco",
+										"2": "Circuit de Monaco",
+										"3": "Monte-Carlo",
+										"4": "Monaco",
+										"5": "43.7347",
+										"6": "7.42056",
+										"7": "7",
+										"8": "http://en.wikipedia.org/wiki/Circuit_de_Monaco"
+									},
+									{
+										"0": "7",
+										"1": "villeneuve",
+										"2": "Circuit Gilles Villeneuve",
+										"3": "Montreal",
+										"4": "Canada",
+										"5": "45.5",
+										"6": "-73.5228",
+										"7": "13",
+										"8": "http://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve"
+									},
+									{
+										"0": "8",
+										"1": "magny_cours",
+										"2": "Circuit de Nevers Magny-Cours",
+										"3": "Magny Cours",
+										"4": "France",
+										"5": "46.8642",
+										"6": "3.16361",
+										"7": "228",
+										"8": "http://en.wikipedia.org/wiki/Circuit_de_Nevers_Magny-Cours"
+									},
+									{
+										"0": "9",
+										"1": "silverstone",
+										"2": "Silverstone Circuit",
+										"3": "Silverstone",
+										"4": "UK",
+										"5": "52.0786",
+										"6": "-1.01694",
+										"7": "153",
+										"8": "http://en.wikipedia.org/wiki/Silverstone_Circuit"
+									},
+									{
+										"0": "10",
+										"1": "hockenheimring",
+										"2": "Hockenheimring",
+										"3": "Hockenheim",
+										"4": "Germany",
+										"5": "49.3278",
+										"6": "8.56583",
+										"7": "103",
+										"8": "http://en.wikipedia.org/wiki/Hockenheimring"
+									},
+									{
+										"0": "11",
+										"1": "hungaroring",
+										"2": "Hungaroring",
+										"3": "Budapest",
+										"4": "Hungary",
+										"5": "47.5789",
+										"6": "19.2486",
+										"7": "264",
+										"8": "http://en.wikipedia.org/wiki/Hungaroring"
+									},
+									{
+										"0": "12",
+										"1": "valencia",
+										"2": "Valencia Street Circuit",
+										"3": "Valencia",
+										"4": "Spain",
+										"5": "39.4589",
+										"6": "-0.331667",
+										"7": "4",
+										"8": "http://en.wikipedia.org/wiki/Valencia_Street_Circuit"
+									},
+									{
+										"0": "13",
+										"1": "spa",
+										"2": "Circuit de Spa-Francorchamps",
+										"3": "Spa",
+										"4": "Belgium",
+										"5": "50.4372",
+										"6": "5.97139",
+										"7": "401",
+										"8": "http://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps"
+									},
+									{
+										"0": "14",
+										"1": "monza",
+										"2": "Autodromo Nazionale di Monza",
+										"3": "Monza",
+										"4": "Italy",
+										"5": "45.6156",
+										"6": "9.28111",
+										"7": "162",
+										"8": "http://en.wikipedia.org/wiki/Autodromo_Nazionale_Monza"
+									},
+									{
+										"0": "15",
+										"1": "marina_bay",
+										"2": "Marina Bay Street Circuit",
+										"3": "Marina Bay",
+										"4": "Singapore",
+										"5": "1.2914",
+										"6": "103.864",
+										"7": "18",
+										"8": "http://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
+									},
+									{
+										"0": "16",
+										"1": "fuji",
+										"2": "Fuji Speedway",
+										"3": "Oyama",
+										"4": "Japan",
+										"5": "35.3717",
+										"6": "138.927",
+										"7": "583",
+										"8": "http://en.wikipedia.org/wiki/Fuji_Speedway"
+									},
+									{
+										"0": "17",
+										"1": "shanghai",
+										"2": "Shanghai International Circuit",
+										"3": "Shanghai",
+										"4": "China",
+										"5": "31.3389",
+										"6": "121.22",
+										"7": "5",
+										"8": "http://en.wikipedia.org/wiki/Shanghai_International_Circuit"
+									},
+									{
+										"0": "18",
+										"1": "interlagos",
+										"2": "Autódromo José Carlos Pace",
+										"3": "São Paulo",
+										"4": "Brazil",
+										"5": "-23.7036",
+										"6": "-46.6997",
+										"7": "785",
+										"8": "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace"
+									},
+									{
+										"0": "19",
+										"1": "indianapolis",
+										"2": "Indianapolis Motor Speedway",
+										"3": "Indianapolis",
+										"4": "USA",
+										"5": "39.795",
+										"6": "-86.2347",
+										"7": "223",
+										"8": "http://en.wikipedia.org/wiki/Indianapolis_Motor_Speedway"
+									},
+									{
+										"0": "20",
+										"1": "nurburgring",
+										"2": "Nürburgring",
+										"3": "Nürburg",
+										"4": "Germany",
+										"5": "50.3356",
+										"6": "6.9475",
+										"7": "578",
+										"8": "http://en.wikipedia.org/wiki/N%C3%BCrburgring"
+									},
+									{
+										"0": "21",
+										"1": "imola",
+										"2": "Autodromo Enzo e Dino Ferrari",
+										"3": "Imola",
+										"4": "Italy",
+										"5": "44.3439",
+										"6": "11.7167",
+										"7": "37",
+										"8": "http://en.wikipedia.org/wiki/Autodromo_Enzo_e_Dino_Ferrari"
+									},
+									{
+										"0": "22",
+										"1": "suzuka",
+										"2": "Suzuka Circuit",
+										"3": "Suzuka",
+										"4": "Japan",
+										"5": "34.8431",
+										"6": "136.541",
+										"7": "45",
+										"8": "http://en.wikipedia.org/wiki/Suzuka_Circuit"
+									},
+									{
+										"0": "23",
+										"1": "osterreichring",
+										"2": "A1-Ring",
+										"3": "Spielburg",
+										"4": "Austria",
+										"5": "47.2197",
+										"6": "14.7647",
+										"7": "678",
+										"8": "http://en.wikipedia.org/wiki/A1-Ring"
+									},
+									{
+										"0": "24",
+										"1": "yas_marina",
+										"2": "Yas Marina Circuit",
+										"3": "Abu Dhabi",
+										"4": "UAE",
+										"5": "24.4672",
+										"6": "54.6031",
+										"7": "3",
+										"8": "http://en.wikipedia.org/wiki/Yas_Marina_Circuit"
+									},
+									{
+										"0": "25",
+										"1": "galvez",
+										"2": "Autódromo Juan y Oscar Gálvez",
+										"3": "Buenos Aires",
+										"4": "Argentina",
+										"5": "-34.6943",
+										"6": "-58.4593",
+										"7": "8",
+										"8": "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Oscar_Alfredo_G%C3%A1lvez"
+									},
+									{
+										"0": "26",
+										"1": "jerez",
+										"2": "Circuito de Jerez",
+										"3": "Jerez de la Frontera",
+										"4": "Spain",
+										"5": "36.7083",
+										"6": "-6.03417",
+										"7": "37",
+										"8": "http://en.wikipedia.org/wiki/Circuito_Permanente_de_Jerez"
+									},
+									{
+										"0": "27",
+										"1": "estoril",
+										"2": "Autódromo do Estoril",
+										"3": "Estoril",
+										"4": "Portugal",
+										"5": "38.7506",
+										"6": "-9.39417",
+										"7": "130",
+										"8": "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_do_Estoril"
+									},
+									{
+										"0": "28",
+										"1": "okayama",
+										"2": "Okayama International Circuit",
+										"3": "Okayama",
+										"4": "Japan",
+										"5": "34.915",
+										"6": "134.221",
+										"7": "266",
+										"8": "http://en.wikipedia.org/wiki/TI_Circuit"
+									},
+									{
+										"0": "29",
+										"1": "adelaide",
+										"2": "Adelaide Street Circuit",
+										"3": "Adelaide",
+										"4": "Australia",
+										"5": "-34.9272",
+										"6": "138.617",
+										"7": "58",
+										"8": "http://en.wikipedia.org/wiki/Adelaide_Street_Circuit"
+									},
+									{
+										"0": "30",
+										"1": "kyalami",
+										"2": "Kyalami",
+										"3": "Midrand",
+										"4": "South Africa",
+										"5": "-25.9894",
+										"6": "28.0767",
+										"7": "1460",
+										"8": "http://en.wikipedia.org/wiki/Kyalami"
+									},
+									{
+										"0": "31",
+										"1": "donington",
+										"2": "Donington Park",
+										"3": "Castle Donington",
+										"4": "UK",
+										"5": "52.8306",
+										"6": "-1.37528",
+										"7": "88",
+										"8": "http://en.wikipedia.org/wiki/Donington_Park"
+									},
+									{
+										"0": "32",
+										"1": "rodriguez",
+										"2": "Autódromo Hermanos Rodríguez",
+										"3": "Mexico City",
+										"4": "Mexico",
+										"5": "19.4042",
+										"6": "-99.0907",
+										"7": "2227",
+										"8": "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez"
+									},
+									{
+										"0": "33",
+										"1": "phoenix",
+										"2": "Phoenix street circuit",
+										"3": "Phoenix",
+										"4": "USA",
+										"5": "33.4479",
+										"6": "-112.075",
+										"7": "345",
+										"8": "http://en.wikipedia.org/wiki/Phoenix_street_circuit"
+									},
+									{
+										"0": "34",
+										"1": "ricard",
+										"2": "Circuit Paul Ricard",
+										"3": "Le Castellet",
+										"4": "France",
+										"5": "43.2506",
+										"6": "5.79167",
+										"7": "432",
+										"8": "http://en.wikipedia.org/wiki/Paul_Ricard_Circuit"
+									},
+									{
+										"0": "35",
+										"1": "yeongam",
+										"2": "Korean International Circuit",
+										"3": "Yeongam County",
+										"4": "Korea",
+										"5": "34.7333",
+										"6": "126.417",
+										"7": "0",
+										"8": "http://en.wikipedia.org/wiki/Korean_International_Circuit"
+									},
+									{
+										"0": "36",
+										"1": "jacarepagua",
+										"2": "Autódromo Internacional Nelson Piquet",
+										"3": "Rio de Janeiro",
+										"4": "Brazil",
+										"5": "-22.9756",
+										"6": "-43.395",
+										"7": "1126",
+										"8": "http://en.wikipedia.org/wiki/Aut%C3%B3dromo_Internacional_Nelson_Piquet"
+									},
+									{
+										"0": "37",
+										"1": "detroit",
+										"2": "Detroit Street Circuit",
+										"3": "Detroit",
+										"4": "USA",
+										"5": "42.3298",
+										"6": "-83.0401",
+										"7": "177",
+										"8": "http://en.wikipedia.org/wiki/Detroit_street_circuit"
+									},
+									{
+										"0": "38",
+										"1": "brands_hatch",
+										"2": "Brands Hatch",
+										"3": "Kent",
+										"4": "UK",
+										"5": "51.3569",
+										"6": "0.263056",
+										"7": "145",
+										"8": "http://en.wikipedia.org/wiki/Brands_Hatch"
+									},
+									{
+										"0": "39",
+										"1": "zandvoort",
+										"2": "Circuit Park Zandvoort",
+										"3": "Zandvoort",
+										"4": "Netherlands",
+										"5": "52.3888",
+										"6": "4.54092",
+										"7": "6",
+										"8": "http://en.wikipedia.org/wiki/Circuit_Zandvoort"
+									},
+									{
+										"0": "40",
+										"1": "zolder",
+										"2": "Zolder",
+										"3": "Heusden-Zolder",
+										"4": "Belgium",
+										"5": "50.9894",
+										"6": "5.25694",
+										"7": "36",
+										"8": "http://en.wikipedia.org/wiki/Zolder"
+									},
+									{
+										"0": "41",
+										"1": "dijon",
+										"2": "Dijon-Prenois",
+										"3": "Dijon",
+										"4": "France",
+										"5": "47.3625",
+										"6": "4.89913",
+										"7": "484",
+										"8": "http://en.wikipedia.org/wiki/Dijon-Prenois"
+									},
+									{
+										"0": "42",
+										"1": "dallas",
+										"2": "Fair Park",
+										"3": "Dallas",
+										"4": "USA",
+										"5": "32.7774",
+										"6": "-96.7587",
+										"7": "139",
+										"8": "http://en.wikipedia.org/wiki/Fair_Park"
+									},
+									{
+										"0": "43",
+										"1": "long_beach",
+										"2": "Long Beach",
+										"3": "California",
+										"4": "USA",
+										"5": "33.7651",
+										"6": "-118.189",
+										"7": "12",
+										"8": "http://en.wikipedia.org/wiki/Long_Beach,_California"
+									},
+									{
+										"0": "44",
+										"1": "las_vegas",
+										"2": "Las Vegas Street Circuit",
+										"3": "Nevada",
+										"4": "USA",
+										"5": "36.1162",
+										"6": "-115.174",
+										"7": "639",
+										"8": "http://en.wikipedia.org/wiki/Las_Vegas,_Nevada"
+									},
+									{
+										"0": "45",
+										"1": "jarama",
+										"2": "Jarama",
+										"3": "Madrid",
+										"4": "Spain",
+										"5": "40.6171",
+										"6": "-3.58558",
+										"7": "609",
+										"8": "http://en.wikipedia.org/wiki/Circuito_Permanente_Del_Jarama"
+									},
+									{
+										"0": "46",
+										"1": "watkins_glen",
+										"2": "Watkins Glen",
+										"3": "New York State",
+										"4": "USA",
+										"5": "42.3369",
+										"6": "-76.9272",
+										"7": "485",
+										"8": "http://en.wikipedia.org/wiki/Watkins_Glen_International"
+									},
+									{
+										"0": "47",
+										"1": "anderstorp",
+										"2": "Scandinavian Raceway",
+										"3": "Anderstorp",
+										"4": "Sweden",
+										"5": "57.2653",
+										"6": "13.6042",
+										"7": "153",
+										"8": "http://en.wikipedia.org/wiki/Scandinavian_Raceway"
+									},
+									{
+										"0": "48",
+										"1": "mosport",
+										"2": "Mosport International Raceway",
+										"3": "Ontario",
+										"4": "Canada",
+										"5": "44.0481",
+										"6": "-78.6756",
+										"7": "332",
+										"8": "http://en.wikipedia.org/wiki/Mosport"
+									},
+									{
+										"0": "49",
+										"1": "montjuic",
+										"2": "Montjuïc",
+										"3": "Barcelona",
+										"4": "Spain",
+										"5": "41.3664",
+										"6": "2.15167",
+										"7": "79",
+										"8": "http://en.wikipedia.org/wiki/Montju%C3%AFc_circuit"
+									},
+									{
+										"0": "50",
+										"1": "nivelles",
+										"2": "Nivelles-Baulers",
+										"3": "Brussels",
+										"4": "Belgium",
+										"5": "50.6211",
+										"6": "4.32694",
+										"7": "139",
+										"8": "http://en.wikipedia.org/wiki/Nivelles-Baulers"
+									},
+									{
+										"0": "51",
+										"1": "charade",
+										"2": "Charade Circuit",
+										"3": "Clermont-Ferrand",
+										"4": "France",
+										"5": "45.7472",
+										"6": "3.03889",
+										"7": "790",
+										"8": "http://en.wikipedia.org/wiki/Charade_Circuit"
+									},
+									{
+										"0": "52",
+										"1": "tremblant",
+										"2": "Circuit Mont-Tremblant",
+										"3": "Quebec",
+										"4": "Canada",
+										"5": "46.1877",
+										"6": "-74.6099",
+										"7": "214",
+										"8": "http://en.wikipedia.org/wiki/Circuit_Mont-Tremblant"
+									},
+									{
+										"0": "53",
+										"1": "essarts",
+										"2": "Rouen-Les-Essarts",
+										"3": "Rouen",
+										"4": "France",
+										"5": "49.3306",
+										"6": "1.00458",
+										"7": "81",
+										"8": "http://en.wikipedia.org/wiki/Rouen-Les-Essarts"
+									},
+									{
+										"0": "54",
+										"1": "lemans",
+										"2": "Le Mans",
+										"3": "Le Mans",
+										"4": "France",
+										"5": "47.95",
+										"6": "0.224231",
+										"7": "67",
+										"8": "http://en.wikipedia.org/wiki/Circuit_de_la_Sarthe#Bugatti_Circuit"
+									},
+									{
+										"0": "55",
+										"1": "reims",
+										"2": "Reims-Gueux",
+										"3": "Reims",
+										"4": "France",
+										"5": "49.2542",
+										"6": "3.93083",
+										"7": "88",
+										"8": "http://en.wikipedia.org/wiki/Reims-Gueux"
+									},
+									{
+										"0": "56",
+										"1": "george",
+										"2": "Prince George Circuit",
+										"3": "Eastern Cape Province",
+										"4": "South Africa",
+										"5": "-33.0486",
+										"6": "27.8736",
+										"7": "15",
+										"8": "http://en.wikipedia.org/wiki/Prince_George_Circuit"
+									},
+									{
+										"0": "57",
+										"1": "zeltweg",
+										"2": "Zeltweg",
+										"3": "Styria",
+										"4": "Austria",
+										"5": "47.2039",
+										"6": "14.7478",
+										"7": "676",
+										"8": "http://en.wikipedia.org/wiki/Zeltweg_Airfield"
+									},
+									{
+										"0": "58",
+										"1": "aintree",
+										"2": "Aintree",
+										"3": "Liverpool",
+										"4": "UK",
+										"5": "53.4769",
+										"6": "-2.94056",
+										"7": "20",
+										"8": "http://en.wikipedia.org/wiki/Aintree_Motor_Racing_Circuit"
+									},
+									{
+										"0": "59",
+										"1": "boavista",
+										"2": "Circuito da Boavista",
+										"3": "Oporto",
+										"4": "Portugal",
+										"5": "41.1705",
+										"6": "-8.67325",
+										"7": "28",
+										"8": "http://en.wikipedia.org/wiki/Circuito_da_Boavista"
+									},
+									{
+										"0": "60",
+										"1": "riverside",
+										"2": "Riverside International Raceway",
+										"3": "California",
+										"4": "USA",
+										"5": "33.937",
+										"6": "-117.273",
+										"7": "470",
+										"8": "http://en.wikipedia.org/wiki/Riverside_International_Raceway"
+									},
+									{
+										"0": "61",
+										"1": "avus",
+										"2": "AVUS",
+										"3": "Berlin",
+										"4": "Germany",
+										"5": "52.4806",
+										"6": "13.2514",
+										"7": "53",
+										"8": "http://en.wikipedia.org/wiki/AVUS"
+									},
+									{
+										"0": "62",
+										"1": "monsanto",
+										"2": "Monsanto Park Circuit",
+										"3": "Lisbon",
+										"4": "Portugal",
+										"5": "38.7197",
+										"6": "-9.20306",
+										"7": "158",
+										"8": "http://en.wikipedia.org/wiki/Monsanto_Park_Circuit"
+									},
+									{
+										"0": "63",
+										"1": "sebring",
+										"2": "Sebring International Raceway",
+										"3": "Florida",
+										"4": "USA",
+										"5": "27.4547",
+										"6": "-81.3483",
+										"7": "18",
+										"8": "http://en.wikipedia.org/wiki/Sebring_Raceway"
+									},
+									{
+										"0": "64",
+										"1": "ain-diab",
+										"2": "Ain Diab",
+										"3": "Casablanca",
+										"4": "Morocco",
+										"5": "33.5786",
+										"6": "-7.6875",
+										"7": "19",
+										"8": "http://en.wikipedia.org/wiki/Ain-Diab_Circuit"
+									},
+									{
+										"0": "65",
+										"1": "pescara",
+										"2": "Pescara Circuit",
+										"3": "Pescara",
+										"4": "Italy",
+										"5": "42.475",
+										"6": "14.1508",
+										"7": "129",
+										"8": "http://en.wikipedia.org/wiki/Pescara_Circuit"
+									},
+									{
+										"0": "66",
+										"1": "bremgarten",
+										"2": "Circuit Bremgarten",
+										"3": "Bern",
+										"4": "Switzerland",
+										"5": "46.9589",
+										"6": "7.40194",
+										"7": "551",
+										"8": "http://en.wikipedia.org/wiki/Circuit_Bremgarten"
+									},
+									{
+										"0": "67",
+										"1": "pedralbes",
+										"2": "Circuit de Pedralbes",
+										"3": "Barcelona",
+										"4": "Spain",
+										"5": "41.3903",
+										"6": "2.11667",
+										"7": "85",
+										"8": "http://en.wikipedia.org/wiki/Pedralbes_Circuit"
+									},
+									{
+										"0": "68",
+										"1": "buddh",
+										"2": "Buddh International Circuit",
+										"3": "Uttar Pradesh",
+										"4": "India",
+										"5": "28.3487",
+										"6": "77.5331",
+										"7": "194",
+										"8": "http://en.wikipedia.org/wiki/Buddh_International_Circuit"
+									},
+									{
+										"0": "69",
+										"1": "americas",
+										"2": "Circuit of the Americas",
+										"3": "Austin",
+										"4": "USA",
+										"5": "30.1328",
+										"6": "-97.6411",
+										"7": "161",
+										"8": "http://en.wikipedia.org/wiki/Circuit_of_the_Americas"
+									},
+									{
+										"0": "70",
+										"1": "red_bull_ring",
+										"2": "Red Bull Ring",
+										"3": "Spielburg",
+										"4": "Austria",
+										"5": "47.2197",
+										"6": "14.7647",
+										"7": "678",
+										"8": "http://en.wikipedia.org/wiki/Red_Bull_Ring"
+									},
+									{
+										"0": "71",
+										"1": "sochi",
+										"2": "Sochi Autodrom",
+										"3": "Sochi",
+										"4": "Russia",
+										"5": "43.4057",
+										"6": "39.9578",
+										"7": "2",
+										"8": "http://en.wikipedia.org/wiki/Sochi_Autodrom"
+									},
+									{
+										"0": "72",
+										"1": "port_imperial",
+										"2": "Port Imperial Street Circuit",
+										"3": "New Jersey",
+										"4": "USA",
+										"5": "40.7769",
+										"6": "-74.0111",
+										"7": "4",
+										"8": "http://en.wikipedia.org/wiki/Port_Imperial_Street_Circuit"
+									},
+									{
+										"0": "73",
+										"1": "BAK",
+										"2": "Baku City Circuit",
+										"3": "Baku",
+										"4": "Azerbaijan",
+										"5": "40.3725",
+										"6": "49.8533",
+										"7": "-7",
+										"8": "http://en.wikipedia.org/wiki/Baku_City_Circuit"
+									},
+									{
+										"0": "74",
+										"1": "hanoi",
+										"2": "Hanoi Street Circuit",
+										"3": "Hanoi",
+										"4": "Vietnam",
+										"5": "21.0166",
+										"6": "105.766",
+										"7": "9",
+										"8": "http://en.wikipedia.org/wiki/Hanoi_Street_Circuit"
+									},
+									{
+										"0": "75",
+										"1": "portimao",
+										"2": "Autódromo Internacional do Algarve",
+										"3": "Portimão",
+										"4": "Portugal",
+										"5": "37.227",
+										"6": "-8.6267",
+										"7": "108",
+										"8": "http://en.wikipedia.org/wiki/Algarve_International_Circuit"
+									},
+									{
+										"0": "76",
+										"1": "mugello",
+										"2": "Autodromo Internazionale del Mugello",
+										"3": "Mugello",
+										"4": "Italy",
+										"5": "43.9975",
+										"6": "11.3719",
+										"7": "255",
+										"8": "http://en.wikipedia.org/wiki/Mugello_Circuit"
+									},
+									{
+										"0": "77",
+										"1": "jeddah",
+										"2": "Jeddah Street Circuit",
+										"3": "Jeddah",
+										"4": "Saudi Arabia",
+										"5": "21.5433",
+										"6": "39.1728",
+										"7": "15",
+										"8": "http://en.wikipedia.org/wiki/Jeddah_Street_Circuit"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "circuitId",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "circuitRef",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "name",
+										"type": "string"
+									},
+									{
+										"key": "3",
+										"name": "location",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "country",
+										"type": "string"
+									},
+									{
+										"key": "5",
+										"name": "lat",
+										"type": "double"
+									},
+									{
+										"key": "6",
+										"name": "lng",
+										"type": "double"
+									},
+									{
+										"key": "7",
+										"name": "alt",
+										"type": "bigint"
+									},
+									{
+										"key": "8",
+										"name": "url",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"b4a2b176-b283-44a1-8d35-4d6a219f4fcd": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "1",
+										"1": "vaibhav",
+										"2": "TCS"
+									},
+									{
+										"0": "2",
+										"1": "tejal",
+										"2": "Accenture"
+									},
+									{
+										"0": "3",
+										"1": "shambhuraje",
+										"2": "Wipro"
+									},
+									{
+										"0": "4",
+										"1": "komal",
+										"2": "Wodaphone"
+									},
+									{
+										"0": "5",
+										"1": "shreyas",
+										"2": "Emtech"
+									},
+									{
+										"0": "6",
+										"1": "pratik",
+										"2": "Capgemini"
+									},
+									{
+										"0": "7",
+										"1": "sharad",
+										"2": "Walmart"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "id",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "name",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "company",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"c5520e39-f383-4b5d-bd07-38e9433a8972": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "10",
+										"1": "Administration",
+										"2": "200.0",
+										"3": "1700"
+									},
+									{
+										"0": "20",
+										"1": "Marketing",
+										"2": "201.0",
+										"3": "1800"
+									},
+									{
+										"0": "30",
+										"1": "Purchasing",
+										"2": "114.0",
+										"3": "1700"
+									},
+									{
+										"0": "40",
+										"1": "Human Resources",
+										"2": "203.0",
+										"3": "2400"
+									},
+									{
+										"0": "50",
+										"1": "Shipping",
+										"2": "121.0",
+										"3": "1500"
+									},
+									{
+										"0": "60",
+										"1": "IT",
+										"2": "103.0",
+										"3": "1400"
+									},
+									{
+										"0": "70",
+										"1": "Public Relations",
+										"2": "204.0",
+										"3": "2700"
+									},
+									{
+										"0": "80",
+										"1": "Sales",
+										"2": "145.0",
+										"3": "2500"
+									},
+									{
+										"0": "90",
+										"1": "Executive",
+										"2": "100.0",
+										"3": "1700"
+									},
+									{
+										"0": "100",
+										"1": "Finance",
+										"2": "108.0",
+										"3": "1700"
+									},
+									{
+										"0": "110",
+										"1": "Accounting",
+										"2": "205.0",
+										"3": "1700"
+									},
+									{
+										"0": "120",
+										"1": "Treasury",
+										"3": "1700"
+									},
+									{
+										"0": "130",
+										"1": "Corporate Tax",
+										"3": "1700"
+									},
+									{
+										"0": "140",
+										"1": "Control And Credit",
+										"3": "1700"
+									},
+									{
+										"0": "150",
+										"1": "Shareholder Services",
+										"3": "1700"
+									},
+									{
+										"0": "160",
+										"1": "Benefits",
+										"3": "1700"
+									},
+									{
+										"0": "170",
+										"1": "Manufacturing",
+										"3": "1700"
+									},
+									{
+										"0": "180",
+										"1": "Construction",
+										"3": "1700"
+									},
+									{
+										"0": "190",
+										"1": "Contracting",
+										"3": "1700"
+									},
+									{
+										"0": "200",
+										"1": "Operations",
+										"3": "1700"
+									},
+									{
+										"0": "210",
+										"1": "IT Support",
+										"3": "1700"
+									},
+									{
+										"0": "220",
+										"1": "NOC",
+										"3": "1700"
+									},
+									{
+										"0": "230",
+										"1": "IT Helpdesk",
+										"3": "1700"
+									},
+									{
+										"0": "240",
+										"1": "Government Sales",
+										"3": "1700"
+									},
+									{
+										"0": "250",
+										"1": "Retail Sales",
+										"3": "1700"
+									},
+									{
+										"0": "260",
+										"1": "Recruiting",
+										"3": "1700"
+									},
+									{
+										"0": "270",
+										"1": "Payroll",
+										"3": "1700"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "DEPARTMENT_ID",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "DEPARTMENT_NAME",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "MANAGER_ID",
+										"type": "double"
+									},
+									{
+										"key": "3",
+										"name": "LOCATION_ID",
+										"type": "bigint"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"93b6dd53-cb40-4bdc-bc2f-65b8fa4ad8d9": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "0",
+										"1": "17",
+										"2": "ab"
+									},
+									{
+										"0": "1",
+										"1": "18",
+										"2": "virat"
+									},
+									{
+										"0": "2",
+										"1": "7",
+										"2": "dhoni"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "Unnamed: 0",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "jurcey_number",
+										"type": "bigint"
+									},
+									{
+										"key": "2",
+										"name": "name",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/528b87e8-651b-4bf9-bace-6280585e8831/resourceGroups/AzureResourceGroup/providers/Microsoft.Synapse/workspaces/azure-synapse-practice-ws/bigDataPools/SparkPool",
+				"name": "SparkPool",
+				"type": "Spark",
+				"endpoint": "https://azure-synapse-practice-ws.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/SparkPool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.4",
+				"nodeCount": 10,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"print(\"hello world\")"
+				],
+				"execution_count": 41
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"import pandas\r\n",
+					"circuits_df = pandas.read_csv('abfss://demo@synapsestoragee.dfs.core.windows.net/circuits.csv',\r\n",
+					"storage_options={'account_key':'7+nvl+NhIH+Fuvnb0n/jTZka00Zl0KaTOlDHMixl+OF/9MR7vsSCfdKuKuQfB5mZkLo3QukETY9B+AStbl8oeQ=='})\r\n",
+					"display(circuits_df) # account key = access key"
+				],
+				"execution_count": 42
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"emp=pandas.DataFrame({\r\n",
+					"    'id':[1,2,3,4,5,6,7],\r\n",
+					"'name':['vaibhav','tejal','shambhuraje','komal','shreyas','pratik','sharad'],\r\n",
+					"'company':['TCS','Accenture','Wipro','Wodaphone','Emtech','Capgemini','Walmart']\r\n",
+					"})\r\n",
+					"display(emp)"
+				],
+				"execution_count": 43
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# after we want to write in csv\r\n",
+					"emp.to_csv(\"abfss://demo@synapsestoragee.dfs.core.windows.net/emp.csv\")"
+				],
+				"execution_count": 44
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				]
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"# Using FSSPEC (file system specification) read and write\r\n",
+					"import fsspec\r\n",
+					"import pandas\r\n",
+					"\r\n",
+					"adls_account_name = 'synapsestoragee'\r\n",
+					"sas_token = TokenLibrary.getConnectionString('LS_AzureDataLakeStorage')\r\n",
+					"\r\n",
+					"# After open this file usinf fsspec\r\n",
+					"fsspec_object =fsspec.open('abfss://demo/departments.csv',adls_account_name=adls_account_name,sas_token=sas_token)\r\n",
+					"\r\n",
+					"with fsspec_object.open() as f:\r\n",
+					"    dept_df = pandas.read_csv(f)\r\n",
+					"\r\n",
+					"display(dept_df)\r\n",
+					"\r\n",
+					""
+				],
+				"execution_count": 45
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"#  write data using fsspec\r\n",
+					"# Using FSSPEC (file system specification) read and write\r\n",
+					"import fsspec\r\n",
+					"import pandas\r\n",
+					"\r\n",
+					"adls_account_name = 'synapsestoragee'\r\n",
+					"sas_token = TokenLibrary.getConnectionString('LS_AzureDataLakeStorage')\r\n",
+					"\r\n",
+					"data = pandas.DataFrame({'jurcey_number':[17,18,7],'name':['ab','virat','dhoni']})\r\n",
+					"\r\n",
+					"# After open this file usinf fsspec\r\n",
+					"fsspec_object =fsspec.open('abfss://demo/players.csv',adls_account_name=adls_account_name,sas_token=sas_token,mode='wt')\r\n",
+					"\r\n",
+					"with fsspec_object.open() as f:\r\n",
+					"    data.to_csv(f)\r\n",
+					"\r\n",
+					"\r\n",
+					""
+				],
+				"execution_count": 46
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"#  read data using fsspec\r\n",
+					"# Using FSSPEC (file system specification) read and write\r\n",
+					"import fsspec\r\n",
+					"import pandas\r\n",
+					"\r\n",
+					"adls_account_name = 'synapsestoragee'\r\n",
+					"sas_token = TokenLibrary.getConnectionString('LS_AzureDataLakeStorage')\r\n",
+					"\r\n",
+					"# After open this file usinf fsspec\r\n",
+					"fsspec_object =fsspec.open('abfss://demo/players.csv',adls_account_name=adls_account_name,sas_token=sas_token)\r\n",
+					"\r\n",
+					"with fsspec_object.open() as fs:\r\n",
+					"    pl_df = pandas.read_csv(fs)\r\n",
+					"\r\n",
+					"display(pl_df)"
+				],
+				"execution_count": 47
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# how to parameterize your synapse notebook"
+				]
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"tags": [
+						"parameters"
+					]
+				},
+				"source": [
+					"first_name = 'vaibhav'\r\n",
+					"last_name = 'kadam'\r\n",
+					""
+				],
+				"execution_count": 49
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"full_name = first_name + ' ' + last_name\r\n",
+					"print(full_name)"
+				],
+				"execution_count": 50
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Run Notebook From Pipeline"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"name = 'vaibhav'\r\n",
+					""
+				],
+				"execution_count": 51
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"print(name)"
+				],
+				"execution_count": 52
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# ipywidgets"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"from ipywidgets import widgets\r\n",
+					"\r\n",
+					"lable1 = widgets.Label(value= 'First_name')\r\n",
+					"txt1 = widgets.Text()\r\n",
+					"display(txt1)\r\n",
+					"\r\n",
+					"lable2 = widgets.Label(value= 'last_name')\r\n",
+					"txt2 = widgets.Text()\r\n",
+					"display(txt2)\r\n",
+					"\r\n",
+					"btn = widgets.Button(description = 'Get Full Name')\r\n",
+					"display(btn)\r\n",
+					"\r\n",
+					"lable_full_name = widgets.Label()\r\n",
+					"display(lable_full_name)\r\n",
+					"\r\n",
+					"def getFullName(b):\r\n",
+					"    lable_full_name = 'Full Name is :' + txt1.value + ' ' + txt2.value\r\n",
+					"    \r\n",
+					"btn.on_click(getFullName)"
+				],
+				"execution_count": 57
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# MsSParkUtilities"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"from notebookutils import mssparkutils"
+				],
+				"execution_count": 58
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"mssparkutils.notebook.help()"
+				],
+				"execution_count": 59
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"from notebookutils import mssparkutils\r\n",
+					"mssparkutils.env.help()\r\n",
+					"mssparkutils.env.getClusterId"
+				],
+				"execution_count": 67
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"mssparkutils.runtime.context"
+				],
+				"execution_count": 68
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# configure accesss to azure key vault"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"mssparkutils.credentials.help()"
+				],
+				"execution_count": 69
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"mssparkutils.credentials.getSecret('kv-formulaOneProject','application-id')"
+				],
+				"execution_count": 70
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					}
+				},
+				"source": [
+					"# Create lake databsae\n",
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"CREATE DATABASE IF NOT EXISTS sparkDb"
+				],
+				"execution_count": 1
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Create lake  databsae table"
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"CREATE TABLE IF NOT EXISTS sparkDb.emp2\r\n",
+					"(\r\n",
+					"    id INT,\r\n",
+					"    name VARCHAR(20),\r\n",
+					"    gender VARCHAR(20)\r\n",
+					")\r\n",
+					""
+				],
+				"execution_count": 7
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				]
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"INSERT INTO sparkDb.emp2 VALUES(1,'vaibhav','male');\r\n",
+					"INSERT INTO sparkDb.emp2 VALUES(2,'Tejal','Female');\r\n",
+					"INSERT INTO sparkDb.emp2 VALUES(3,'shambhu','male');\r\n",
+					"INSERT INTO sparkDb.emp2 VALUES(4,'shreyas','male');\r\n",
+					"INSERT INTO sparkDb.emp2 VALUES(5,'pratik','male');"
+				],
+				"execution_count": 8
+			}
+		]
+	}
+}

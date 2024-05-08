@@ -1,0 +1,30 @@
+{
+	"name": "Pl_for_run_notebook",
+	"properties": {
+		"activities": [
+			{
+				"name": "practiceSparkPool",
+				"type": "SynapseNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebook": {
+						"referenceName": "practiceSparkPool",
+						"type": "NotebookReference"
+					},
+					"snapshot": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-05-05T06:00:52Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}
