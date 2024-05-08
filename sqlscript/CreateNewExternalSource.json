@@ -1,0 +1,17 @@
+{
+	"name": "CreateNewExternalSource",
+	"properties": {
+		"content": {
+			"query": "-- -- WE need to create master key\n-- USE demoPractice\n-- GO\n-- CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Kadam@9044'\n\n-- After we need to crerate creadential\n\nCREATE DATABASE SCOPED CREDENTIAL demoCredential2\nWITH IDENTITY = 'shared access signature',\nSECRET = 'sp=racw&st=2024-04-26T05:16:49Z&se=2024-04-26T13:16:49Z&spr=https&sv=2022-11-02&sr=c&sig=cI9vAyDnWSuTqhh6qjLRfkUlYf8xdj6Fgoq%2B1%2BGXwcw%3D'\nGO\n \n\n-- After we need to crerate external datasources\n\nCREATE EXTERNAL DATA SOURCE demoExternalDataSource2 WITH\n(\n    LOCATION = 'https://synapsestoragee.dfs.core.windows.net/',\n    CREDENTIAL = demoCredential2\n);",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "demoPractice",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

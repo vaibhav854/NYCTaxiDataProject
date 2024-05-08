@@ -1,0 +1,17 @@
+{
+	"name": "createExternalSourceDedicated",
+	"properties": {
+		"content": {
+			"query": "-- After we need to crerate creadential\n\nCREATE DATABASE SCOPED CREDENTIAL demoCredentialdedicated\nWITH IDENTITY = 'managed identity'\nGO\n \n\n-- After we need to crerate external datasources\n\nCREATE EXTERNAL DATA SOURCE demoExtDataSourceDadicated WITH\n(\n    LOCATION = 'https://synapsestoragee.dfs.core.windows.net/',\n    CREDENTIAL = demoCredentialdedicated\n);\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "DedicatedsqlPool",
+				"poolName": "DedicatedsqlPool"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
