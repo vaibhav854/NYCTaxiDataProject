@@ -5,12 +5,12 @@
 			"name": "nyc_taxi/discovery"
 		},
 		"content": {
-			"query": "SELECT \n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://synapsestoragee.dfs.core.windows.net/nyc-taxi-data/raw/taxi_zone.csv',\n        FORMAT ='csv',\n        PARSER_VERSION= '2.0',\n        HEADER_ROW = TRUE,\n        FIELDTERMINATOR = ',',\n        ROWTERMINATOR = '\\n'\n    ) AS[result]\n\n\n    -- Examine the data types for the columns\n    EXEC sp_describe_first_result_set \n    N'SELECT \n        TOP 100 * \n    FROM \n        OPENROWSET (\n            BULK ''https://synapsestoragee.dfs.core.windows.net/nyc-taxi-data/raw/taxi_zone.csv'',\n            FORMAT = ''csv'',\n            PARSER_VERSION=''2.0'',\n            HEADER_ROW = TRUE\n        )AS [result]'\n\n\n\n\n\n",
+			"query": "SELECT \n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://synapsestoragee.dfs.core.windows.net/nyc-taxi-data/raw/taxi_zone.csv',\n        FORMAT ='csv',\n        PARSER_VERSION= '2.0',\n        HEADER_ROW = TRUE,\n        FIELDTERMINATOR = ',',\n        ROWTERMINATOR = '\\n'\n    ) AS[result]\n\n\n    -- Examine the data types for the columns\n    EXEC sp_describe_first_result_set \n    N'SELECT \n        TOP 100 * \n    FROM \n        OPENROWSET (\n            BULK ''https://synapsestoragee.dfs.core.windows.net/nyc-taxi-data/raw/taxi_zone.csv'',\n            FORMAT = ''csv'',\n            PARSER_VERSION=''2.0'',\n            HEADER_ROW = TRUE\n        )AS [result]'\n\n-- See max length of each column\n\nSELECT \n    MAX(LEN(LocationId)) AS len_LocationId,\n    MAX(LEN(Borough)) AS len_Borough,\n    MAX(LEN(Zone)) AS len_Zone,\n    MAX(LEN(service_zone)) AS len_service_zone\nFROM\n    OPENROWSET(\n        BULK 'abfss://nyc-taxi-data@synapsestoragee.dfs.core.windows.net/raw/taxi_zone.csv',\n        FORMAT ='csv',\n        PARSER_VERSION= '2.0',\n        HEADER_ROW = TRUE,\n        FIELDTERMINATOR = ',',\n        ROWTERMINATOR = '\\n'\n    ) AS[result]\n\n\n\n\n\n",
 			"metadata": {
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "demoPractice",
+				"databaseName": "master",
 				"poolName": "Built-in"
 			},
 			"resultLimit": 5000
