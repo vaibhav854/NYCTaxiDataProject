@@ -1,0 +1,20 @@
+{
+	"name": "3_explore_vendor",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/discovery"
+		},
+		"content": {
+			"query": "USE nyc_taxi_discovery;\n\n-- read file vendor_unquoted.csv this file contains one name and this name contains comma\nSELECT * \n    FROM OPENROWSET (\n        BULK 'vendor_unquoted.csv',\n        DATA_SOURCE = 'nyc_taxi_data_raw',\n        FORMAT = 'csv',\n        HEADER_ROW = TRUE,\n        PARSER_VERSION ='2.0',\n        FIELDTERMINATOR = ',',\n        ROWTERMINATOR = '\\n'\n    )AS vendor;\n\n    -- Read file vendor_escaped.csv  this value contain \\ in name\n\n    SELECT * \n    FROM OPENROWSET (\n        BULK 'vendor_escaped.csv',\n        DATA_SOURCE = 'nyc_taxi_data_raw',\n        FORMAT = 'csv',\n        HEADER_ROW = TRUE,\n        PARSER_VERSION ='2.0',\n        FIELDTERMINATOR = ',',\n        ROWTERMINATOR = '\\n'\n    )AS vendor;\n\n    -- how to deal with this file use escapechar\n    SELECT * \n    FROM OPENROWSET (\n        BULK 'vendor_escaped.csv',\n        DATA_SOURCE = 'nyc_taxi_data_raw',\n        FORMAT = 'csv',\n        HEADER_ROW = TRUE,\n        PARSER_VERSION ='2.0',\n        ESCAPECHAR = '\\',\n        FIELDTERMINATOR = ',',\n        ROWTERMINATOR = '\\n'\n    )AS vendor;\n\n    -- read vendor file name value in double qoute \"\" then use FIELDQUOTE = '\"'\n    SELECT * \n    FROM OPENROWSET (\n        BULK 'vendor.csv',\n        DATA_SOURCE = 'nyc_taxi_data_raw',\n        FORMAT = 'csv',\n        HEADER_ROW = TRUE,\n        PARSER_VERSION ='2.0',\n        FIELDTERMINATOR = ',',\n        FIELDQUOTE = '\"',\n        ROWTERMINATOR = '\\n'\n    )AS vendor;\n\n    ",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "nyc_taxi_discovery",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
