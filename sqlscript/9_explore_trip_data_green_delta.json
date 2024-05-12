@@ -1,0 +1,20 @@
+{
+	"name": "9_explore_trip_data_green_delta",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/discovery"
+		},
+		"content": {
+			"query": "USE nyc_taxi_discovery;\n\n-- Read delta file\nSELECT TOP 100 *\nFROM  \nOPENROWSET (\n   BULK 'trip_data_green_delta/',\n    DATA_SOURCE = 'nyc_taxi_data_raw',\n    FORMAT = 'DELTA'\n)As trip_data\n\n-- there is no delta log folder thats why the show error\nSELECT TOP 100 *\nFROM  \nOPENROWSET (\n   BULK 'trip_data_green_delta/year =2020',\n    DATA_SOURCE = 'nyc_taxi_data_raw',\n    FORMAT = 'DELTA'\n)As trip_data\n\n-- see column details\nEXEC sp_describe_first_result_set N'\nSELECT TOP 100 *\nFROM  \nOPENROWSET (\n   BULK ''trip_data_green_delta/'',\n    DATA_SOURCE = ''nyc_taxi_data_raw'',\n    FORMAT = ''DELTA''\n)As trip_data'\n\n-- give datatype\n\nSELECT TOP 100 *\n FROM \nOPENROWSET (\n   BULK 'trip_data_green_delta/',\n    DATA_SOURCE = 'nyc_taxi_data_raw',\n    FORMAT = 'DELTA'\n)\nWITH\n(\nVendorID INT,\nlpep_pickup_datetime DATETIME2(7),\nlpep_dropoff_datetime DATETIME2(7),\nstore_and_fwd_flag CHAR(1),\nRatecodeID INT,\nPULocationID INT,\nDOLocationID INT,\npassenger_count INT,\ntrip_distance FLOAT,\nfare_amount FLOAT,\nextra FLOAT,\nmta_tax FLOAT,\ntip_amount FLOAT,\ntolls_amount FLOAT,\nehail_fee INT,\nimprovement_surcharge FLOAT,\ntotal_amount FLOAT,\npayment_type INT,\ntrip_type INT,\ncongestion_surcharge FLOAT\n) AS trip_data\n\n-- select specific column but we have to select year and mpnth column cumpalsory because this is partitioning columns\n\nSELECT TOP 100 *\n FROM \nOPENROWSET (\n   BULK 'trip_data_green_delta/',\n    DATA_SOURCE = 'nyc_taxi_data_raw',\n    FORMAT = 'DELTA'\n)\nWITH\n(\ntip_amount FLOAT,\ntrip_type INT,\nyear VARCHAR(4),\nmonth VARCHAR(2)\n) AS trip_data\n\n\n\nSELECT COUNT(DISTINCT payment_type) AS total_count_of_payment_types\n FROM \nOPENROWSET (\n   BULK 'trip_data_green_delta/',\n    DATA_SOURCE = 'nyc_taxi_data_raw',\n    FORMAT = 'DELTA'\n)AS trip_data\nWHERE year = '2020' AND month = '01'\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "nyc_taxi_discovery",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
