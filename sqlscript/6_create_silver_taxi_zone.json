@@ -1,0 +1,20 @@
+{
+	"name": "6_create_silver_taxi_zone",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/logical_dataWarehouse(ldw)"
+		},
+		"content": {
+			"query": "USE nyc_taxi_ldw\n\n-- Create external table using SELECT statemanet\nIF OBJECT_ID('silver.taxi_zone') IS NOT NULL \nDROP EXTERNAL TABLE silver.silver.taxi_zone;\nGo\nCREATE EXTERNAL TABLE nyc_taxi_ldw.silver.taxi_zone\nWITH\n(\n    DATA_SOURCE = nyc_taxi_src,\n    LOCATION = 'silver/taxi_zone',\n    FILE_FORMAT = parquet_file_format\n)\nAS\nSELECT *\nFROM bronze.taxi_zone;\n\nSELECT *\nFROM silver.taxi_zone;\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "nyc_taxi_ldw",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
