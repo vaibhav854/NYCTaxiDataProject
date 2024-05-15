@@ -5,12 +5,12 @@
 			"name": "nyc_taxi/logical_dataWarehouse(ldw)"
 		},
 		"content": {
-			"query": "USE master\nGO \n\n-- create new database \nCREATE DATABASE  nyc_taxi_ldw\nGO\n\nUSE nyc_taxi_ldw\n\nALTER DATABASE nyc_taxi_ldw COLLATE latin1_General_100_BIN2_UTF8\nGO\n\n-- Create schema\n\nCREATE SCHEMA bronze\nGO\n\nCREATE SCHEMA silver\nGO\n\nCREATE SCHEMA gold\nGO\n\nDROP SCHEMA gold;",
+			"query": "USE master\nGO \n\n-- create new database \nCREATE DATABASE  nyc_taxi_ldw\nGO\n\nUSE nyc_taxi_ldw\n\nALTER DATABASE nyc_taxi_ldw COLLATE latin1_General_100_BIN2_UTF8\nGO\n\n-- Create schema\n\nCREATE SCHEMA bronze\nGO\n\ndrop SCHEMA silver\nCREATE SCHEMA silver\nGO\n\nCREATE SCHEMA gold\nGO\n\nDROP SCHEMA gold;",
 			"metadata": {
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "master",
+				"databaseName": "nyc_taxi_ldw",
 				"poolName": "Built-in"
 			},
 			"resultLimit": 5000
