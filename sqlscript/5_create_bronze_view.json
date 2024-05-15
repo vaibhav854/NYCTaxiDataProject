@@ -1,0 +1,20 @@
+{
+	"name": "5_create_bronze_view",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/logical_dataWarehouse(ldw)"
+		},
+		"content": {
+			"query": "USE nyc_taxi_ldw\n\nCREATE VIEW bronze.vw_rate_code\nAS SELECT rate_code_id,rate_code\n    FROM OPENROWSET(\n        BULK 'raw/rate_code.json',\n        DATA_SOURCE = 'nyc_taxi_src',\n        FORMAT = 'CSV',\n        FIELDTERMINATOR = '0x0b',\n        FIELDQUOTE = '0x0b',\n        ROWTERMINATOR = '0x0b'\n    )\n    WITH \n    (\n        jsonDoc NVARCHAR(MAX)\n    )AS rate_code\n    CROSS APPLY OPENJSON(jsonDoc)\n    WITH(\n        rate_code_id TINYINT,\n        rate_code VARCHAR(20) \n        )\n\nSELECT * FROM bronze.vw_rate_code;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "nyc_taxi_ldw",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
