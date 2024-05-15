@@ -5,7 +5,7 @@
 			"name": "nyc_taxi/logical_dataWarehouse(ldw)"
 		},
 		"content": {
-			"query": "USE nyc_taxi_ldw\nGO\n\nCREATE EXTERNAL DATA SOURCE syc_taxi_src\nWITH\n(\n    LOCATION ='https://synapsestoragee.blob.core.windows.net/nyc-taxi-data'\n\n);",
+			"query": "USE nyc_taxi_ldw\nGO\n\nCREATE EXTERNAL DATA SOURCE syc_taxi_src\nWITH\n(\n    LOCATION ='https://synapsestoragee.blob.core.windows.net/nyc-taxi-data'\n\n);\n\nDROP EXTERNAL DATA SOURCE syc_taxi_src;",
 			"metadata": {
 				"language": "sql"
 			},
