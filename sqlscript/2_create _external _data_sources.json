@@ -1,5 +1,5 @@
 {
-	"name": "2_create _external _file_format",
+	"name": "2_create _external _data_sources",
 	"properties": {
 		"folder": {
 			"name": "nyc_taxi/logical_dataWarehouse(ldw)"

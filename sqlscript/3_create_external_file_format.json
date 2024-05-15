@@ -1,0 +1,20 @@
+{
+	"name": "3_create_external_file_format",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/logical_dataWarehouse(ldw)"
+		},
+		"content": {
+			"query": "USE nyc_taxi_ldw\nGO\n\n-- Create an external file format for DELIMITED (CSV/TSV) files.\nCREATE EXTERNAL FILE FORMAT csv_file_format\nWITH (\n        FORMAT_TYPE = DELIMITEDTEXT,\n        FORMAT_OPTIONS(\n            FIELD_TERMINATOR = ',',\n            STRING_DELIMITER = '\"',\n            FIRST_ROW = 2 ,-- Applies to: Azure Synapse Analytics and SQL Server 2022 and later versions\n            USE_TYPE_DEFAULT = FALSE,\n            ENCODING = 'UTF8' ,\n            PARSER_VERSION = '2.0')\n    );\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "nyc_taxi_ldw",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
