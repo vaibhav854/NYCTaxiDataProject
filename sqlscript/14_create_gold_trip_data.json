@@ -1,0 +1,20 @@
+{
+	"name": "14_create_gold_trip_data",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/logical_dataWarehouse(ldw)"
+		},
+		"content": {
+			"query": "USE nyc_taxi_ldw\nGO\n\nSELECT TOP(100)\n            year,\n            month,\n            CONVERT(DATE,td.lpep_pickup_datetime)AS trip_date\n    FROM silver.vw_trip_data_green td\n    WHERE year= '2020' AND month = '01'",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "nyc_taxi_ldw",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
