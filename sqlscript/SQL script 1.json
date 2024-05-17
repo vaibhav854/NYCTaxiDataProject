@@ -1,0 +1,20 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/usp"
+		},
+		"content": {
+			"query": "USE nyc_taxi_ldw\ngo\n\nCREATE OR ALTER PROCEDURE silver.usp_silver_taxi_zone\nas \nBEGIN\nif OBJECT_ID('silver.taxi_zone') is not NULL\n    drop EXTERNAL table silver.taxi_zone;\nCREATE EXTERNAL TABLE silver.taxi_zone \nWITH(\n    DATA_SOURCE  = nyc_taxi_src,\n    LOCATION = 'silver/taxi_zone',\n    file_format = parquet_file_format \n)\nas \nselect * \nfrom bronze.taxi_zone\n\nEND;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "nyc_taxi_ldw",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
