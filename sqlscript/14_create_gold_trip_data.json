@@ -5,7 +5,7 @@
 			"name": "nyc_taxi/logical_dataWarehouse(ldw)"
 		},
 		"content": {
-			"query": "USE nyc_taxi_ldw\nGO\n\nSELECT TOP(100)\n            year,\n            month,\n            CONVERT(DATE,td.lpep_pickup_datetime)AS trip_date\n    FROM silver.vw_trip_data_green td\n    WHERE year= '2020' AND month = '01'",
+			"query": "USE nyc_taxi_ldw\nGO\n\nSELECT TOP(100)\n            year,\n            month,\n            tz.borough,\n            CONVERT(DATE,td.lpep_pickup_datetime)AS trip_date\n    FROM silver.vw_trip_data_green td\n    JOIN silver.taxi_zone tz\n    ON (td.pu_location_id = tz.location_id)\n    JOIN silver.calendar cal\n    ON(cal.date = CONVERT(DATE,td.lpep_pickup_datetime))\n    WHERE year= '2020' AND month = '01'",
 			"metadata": {
 				"language": "sql"
 			},
