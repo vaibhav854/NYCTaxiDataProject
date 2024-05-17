@@ -1,0 +1,20 @@
+{
+	"name": "SQL script 7",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/usp"
+		},
+		"content": {
+			"query": "CREATE OR ALTER PROCEDURE silver.usp_silver_rate_code\nas \nBEGIN\nIF OBJECT_ID('silver.rate_code') is not null \n    drop EXTERNAL TABLE silver.rate_code\ncreate  EXTERNAL TABLE silver.rate_code \nwith \n(\n    data_source = nyc_taxi_src,\n    location = 'silver/rate_code',\n    file_format =  parquet_file_format \n    )\nas \nselect * from bronze.vw_rate_code \nEND;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

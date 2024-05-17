@@ -1,0 +1,20 @@
+{
+	"name": "SQL script 4",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/usp"
+		},
+		"content": {
+			"query": "CREATE OR ALTER PROCEDURE silver.usp_silver_calendar\nas \nBEGIN\nif OBJECT_ID('silver.calendar') is NOT NULL\n    DROP EXTERNAL TABLE silver.calendar\n\nCREATE EXTERNAL TABLE silver.calendar\nWITH(\n    data_source = nyc_taxi_src,\n    location  = 'silver/calendar',\n    file_format = parquet_file_format \n)\n\nas \nselect * from bronze.calender\nEND;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

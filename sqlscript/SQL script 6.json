@@ -1,0 +1,20 @@
+{
+	"name": "SQL script 6",
+	"properties": {
+		"folder": {
+			"name": "nyc_taxi/usp"
+		},
+		"content": {
+			"query": "CREATE OR ALTER PROCEDURE silver.usp_silver_vendor\nas \nBEGIN\nIF OBJECT_ID('silver.vendor') is not null \n    drop EXTERNAL TABLE silver.vendor\ncreate  EXTERNAL TABLE silver.vendor \nwith \n(\n    data_source = nyc_taxi_src,\n    location = 'silver/vendor',\n    file_format =  parquet_file_format \n    )\nas \nselect * from bronze.vendor \nEND;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
