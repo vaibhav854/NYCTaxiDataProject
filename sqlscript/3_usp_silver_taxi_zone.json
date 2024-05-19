@@ -1,5 +1,5 @@
 {
-	"name": "SQL script 3",
+	"name": "3_usp_silver_taxi_zone",
 	"properties": {
 		"folder": {
 			"name": "nyc_taxi/usp"

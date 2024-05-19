@@ -1,5 +1,5 @@
 {
-	"name": "SQL script 8",
+	"name": "8_usp_silver_payment_type",
 	"properties": {
 		"folder": {
 			"name": "nyc_taxi/usp"

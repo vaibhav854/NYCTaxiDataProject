@@ -1,5 +1,5 @@
 {
-	"name": "SQL script 4",
+	"name": "4_usp_silver_calendar",
 	"properties": {
 		"folder": {
 			"name": "nyc_taxi/usp"
